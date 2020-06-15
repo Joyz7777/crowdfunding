@@ -1,6 +1,0 @@
-com/jo/crowd/util/LoginFailedException.class
-com/jo/crowd/util/CrowdConstant.class
-com/jo/crowd/util/CrowdUtil.class
-com/jo/crowd/util/AccessForbiddenException.class
-com/jo/crowd/util/UserAlreadyExistsException.class
-com/jo/crowd/util/ResultEntity.class
