@@ -15,7 +15,7 @@
                 <h4 class="modal-title">Modal title</h4>
             </div>
             <div class="modal-body">
-                <h4>请确认是否要删除下列角色：</h4>
+                <h4>xxxxxxx</h4>
                 <div id="roleNameDiv" style="text-align: center;"></div>
             </div>
             <div class="modal-footer">
