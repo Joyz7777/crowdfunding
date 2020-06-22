@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div id="menuConfirmModal" class="modal fade" tabindex="-1" role="dialog">
+<div id="roleAssignAuthModal" class="modal fade" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -11,11 +11,9 @@
 				<h4 class="modal-title">尚筹网系统弹窗</h4>
 			</div>
 			<form>
-				<div class="modal-body">
-					您真的要删除<span id="removeNodeSpan"></span>这个节点吗？
-				</div>
+
 				<div class="modal-footer">
-					<button id="confirmBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-ok"></i> 确认删除</button>
+					<button id="confirmBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-ok"></i> 确认修改</button>
 				</div>
 			</form>
 		</div>

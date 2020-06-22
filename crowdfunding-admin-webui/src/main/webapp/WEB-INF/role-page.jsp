@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <%@include file="/WEB-INF/include-header.jsp" %>
 <link rel="stylesheet" href="css/pagination.css"/>
-<script type="text/javascript" src="jquery/jquery.pagination.js" charset="GBK"></script>
-<script type="text/javascript" src="crowd/my-role.js" charset="GBK"></script>
+<script type="text/javascript" src="jquery/jquery.pagination.js" charset="UTF-8"></script>
+<script type="text/javascript" src="crowd/my-role.js" charset="UTF-8"></script>
 <script type="text/javascript">
     $(function () {
 
@@ -14,6 +14,11 @@
         window.keyword = "";
 
         generatePage();
+
+        $("#rolePageBody").on("click",".roleAuthBtn",function() {
+
+           $("#roleAssignAuthModal").modal("show");
+        });
 
 
         $("#rolePageBody").on("click", ".removeBtn", function () {
@@ -285,6 +290,7 @@
 <%@ include file="/WEB-INF/modal-role-edit.jsp" %>
 <%@ include file="/WEB-INF/modal-role-add.jsp" %>
 <%@ include file="/WEB-INF/modal-roleArray.jsp" %>
+<%@ include file="/WEB-INF/modal-role-assign.jsp" %>
 
 
 </html>
