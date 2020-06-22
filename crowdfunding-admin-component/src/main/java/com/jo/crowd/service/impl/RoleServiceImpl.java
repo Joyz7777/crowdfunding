@@ -2,6 +2,7 @@ package com.jo.crowd.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.jo.crowd.entity.Admin;
 import com.jo.crowd.entity.Role;
 import com.jo.crowd.entity.RoleExample;
 import com.jo.crowd.mapper.RoleMapper;
@@ -50,5 +51,31 @@ public class RoleServiceImpl implements RoleService {
         criteria.andRoleIdIn(roleIdList);
         rm.deleteByExample(roleExample);
 
+    }
+
+    @Override
+    public List<Role> findAssignedRole(Integer adminId) {
+
+        return rm.getAssignedRole(adminId);
+    }
+
+    @Override
+    public List<Role> findUnAssignedRole(Integer adminId) {
+
+            return rm.getUnAssignedRole(adminId);
+
+
+
+    }
+
+    @Override
+    public void assignRoleToAdmin(Integer adminId, List<Integer> roleIdList) {
+        rm.deleteOldRole(adminId);
+
+        if (roleIdList != null && roleIdList.size()>0){
+            //验证通过执行保存
+            rm.updateAdminRole(adminId,roleIdList);
+
+        }
     }
 }

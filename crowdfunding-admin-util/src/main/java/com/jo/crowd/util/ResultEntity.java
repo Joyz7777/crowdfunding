@@ -6,15 +6,15 @@ public class ResultEntity<T> {
 
     private String result;
     private String message;
-    private T date;
+    private T data;
 
 
     public ResultEntity() {
     }
 
-    public static <E> ResultEntity<E> successWithData(E date) {
+    public static <E> ResultEntity<E> successWithData(E data) {
 
-        return new ResultEntity<E>(SUCCESS, null, date);
+        return new ResultEntity<E>(SUCCESS, null, data);
 
 
     }
@@ -29,10 +29,10 @@ public class ResultEntity<T> {
     }
 
 
-    public ResultEntity(String result, String message, T date) {
+    public ResultEntity(String result, String message, T data) {
         this.result = result;
         this.message = message;
-        this.date = date;
+        this.data = data;
     }
 
     public String getResult() {
@@ -51,11 +51,11 @@ public class ResultEntity<T> {
         this.message = message;
     }
 
-    public T getDate() {
-        return date;
+    public T getData() {
+        return data;
     }
 
-    public void setDate(T date) {
-        this.date = date;
+    public void setData(T date) {
+        this.data = data;
     }
 }

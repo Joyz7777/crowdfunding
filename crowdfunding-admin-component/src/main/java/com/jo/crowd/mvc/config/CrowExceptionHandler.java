@@ -44,7 +44,7 @@ public class CrowExceptionHandler {
                                            HttpServletRequest request,
                                            HttpServletResponse response
                                             ) throws IOException {
-        String viewName = "admin-login";
+        String viewName = "admin-login.";
         return  commonExceptionHandler(viewName, request, response, e);
     }
 
@@ -60,8 +60,8 @@ public class CrowExceptionHandler {
 
             response.getWriter().write(String.valueOf(json));
             return null;
-        } else {
 
+        } else {
 
             ModelAndView view = new ModelAndView(viewName);
             view.addObject(CrowdConstant.ATTR_NAME_EXCEPTION, e);

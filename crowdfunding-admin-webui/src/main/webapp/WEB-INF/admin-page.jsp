@@ -41,10 +41,9 @@
     function paginationCallBack(pageIndex, jQuery) {
         var pageNum = pageIndex + 1;
 
-        if(${empty param.keyword}){
+        if (${empty param.keyword}) {
             window.location.href = "admin/get/user.html?pageNum=" + pageNum;
-        }else
-        {
+        } else {
             window.location.href = "admin/get/user.html?pageNum=" + pageNum + "&keyword=${param.keyword}";
         }
 
@@ -52,7 +51,6 @@
 
 
     }
-
 
 
 </script>
@@ -69,7 +67,8 @@
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-inline" role="form" style="float: left; " action="admin/get/user.html" method="post">
+                    <form class="form-inline" role="form" style="float: left; " action="admin/get/user.html"
+                          method="post">
                         <div class="form-group has-feedback">
                             <div class="input-group">
                                 <div class="input-group-addon">查询条件</div>
@@ -87,8 +86,8 @@
                     </button>
 
                     <button type="button" class="btn btn-primary"
-                    style="float: right;" onclick="window.location.href='admin/to/add.html'">
-                    <i class="glyphicon glyphicon-plus"></i> 新增
+                            style="float: right;" onclick="window.location.href='admin/to/add.html'">
+                        <i class="glyphicon glyphicon-plus"></i> 新增
                     </button>
 
                     <br>
@@ -120,13 +119,16 @@
                                         <td>${admin.userName }</td>
                                         <td>${admin.email }</td>
                                         <td>
-                                            <a href="admin/to/edit/${admin.id}.html?pageNum=${requestScope.pageInfo.pageNum}&keyword=${param.keyword}" class="btn btn-success btn-xs">
-                                                <i class=" glyphicon glyphicon-check"></i>
-                                            </a>
-                                            <button type="button" class="btn btn-primary btn-xs">
+                                            <a href
+                                            ="assign/to/assignRole/page.html?adminId=${admin.id }&pageNum=${requestScope.pageInfo.pageNum }&keyword=${param.keyword }"
+                                            class="btn btn-success btn-xs"><i
+                                                class=" glyphicon glyphicon-check"></i></a>
+                                            <a href="admin/to/edit/${admin.id}.html?pageNum=${requestScope.pageInfo.pageNum}&keyword=${param.keyword}"
+                                               class="btn btn-primary btn-xs">
                                                 <i class=" glyphicon glyphicon-pencil"></i>
-                                            </button>
-                                            <a  href="admin/remove/${admin.id}/${requestScope.pageInfo.pageNum}/${param.keyword}.html" class="btn btn-danger btn-xs">
+                                            </a>
+                                            <a href="admin/remove/${admin.id}/${requestScope.pageInfo.pageNum}/${param.keyword}.html"
+                                               class="btn btn-danger btn-xs">
                                                 <i class=" glyphicon glyphicon-remove"></i>
                                             </a>
                                         </td>
@@ -149,6 +151,7 @@
             </div>
         </div>
     </div>
-</div>s
+</div>
+s
 </body>
 </html>

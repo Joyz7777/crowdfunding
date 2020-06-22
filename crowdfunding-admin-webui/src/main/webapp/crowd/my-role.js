@@ -57,7 +57,7 @@ function getPageInfoRemote() {
 	}
 
 	// 确认result为成功后获取pageInfo
-	var pageInfo = resultEntity.date;
+	var pageInfo = resultEntity.data;
 
 	// 返回pageInfo
 	return pageInfo;

@@ -2,11 +2,13 @@ package com.jo.crowd.mvc.controller;
 
 
 import com.github.pagehelper.PageInfo;
+import com.jo.crowd.entity.Admin;
 import com.jo.crowd.entity.Role;
 import com.jo.crowd.service.api.RoleService;
 import com.jo.crowd.util.ResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +20,12 @@ public class RoleController {
 
     @Autowired
     RoleService rs;
+
+
+
+
+
+
 
     @ResponseBody
     @RequestMapping("/remove/array.json")
