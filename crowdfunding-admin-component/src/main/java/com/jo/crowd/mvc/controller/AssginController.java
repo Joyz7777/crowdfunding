@@ -1,14 +1,19 @@
 package com.jo.crowd.mvc.controller;
 
 
+import com.jo.crowd.entity.Auth;
 import com.jo.crowd.entity.Role;
+import com.jo.crowd.service.api.AuthService;
 import com.jo.crowd.service.api.RoleService;
+import com.jo.crowd.util.ResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.xml.transform.Result;
 import java.util.List;
 
 @Controller
@@ -17,6 +22,20 @@ public class AssginController {
 
     @Autowired
     RoleService rs;
+
+    @Autowired
+    private AuthService authService;
+
+
+    @ResponseBody
+    @RequestMapping("/get/auths.json")
+    public ResultEntity<List<Auth>> getAuths(){
+        List<Auth> authList = authService.getAuths();
+
+        return ResultEntity.successWithData(authList);
+
+    }
+
 
 
 

@@ -1,6 +1,53 @@
+function getAuthTree() {
+
+	var ajaxReturn = $.ajax({
+		url:"assign/get/auths.json",
+		dataType: "json",
+		async: false,
+		"type":"post"
+	});
+
+	//先判断请求是否正常响应
+	if(ajaxReturn.status != 200){
+		layer.msg("获取数据失败,响应状态码为：" + ajaxReturn.status + ", 若有疑问请联系IT人员");
+		return;
+	}
+	// 获取填充树形结构图的数据
+	var authList = ajaxReturn.responseJSON.data;
+
+	// 3.准备对zTree进行设置的JSON对象
+	var setting = {
+		"data": {
+			"simpleData": {
+
+				// 开启简单JSON功能
+				"enable": true,
+
+				// 使用categoryId属性关联父节点，不用默认的pId了
+				"pIdKey": "categoryId"
+			},
+			"key": {
+				// 使用title属性显示节点名称，不用默认的name作为属性名了
+				"name": "title"
+			}
+		},
+		"check": {
+			"enable": true
+		}
+
+	}
+	//绑定生成ztree的位置
+	$.fn.zTree.init($("#authTreeDemo"), setting, authList);
+
+	// 获取zTreeObj对象
+	var zTreeObj = $.fn.zTree.getZTreeObj("authTreeDemo");
+
+	// 调用zTreeObj对象的方法，把节点展开
+	zTreeObj.expandAll(true);
 
 
 
+}
 
 
 

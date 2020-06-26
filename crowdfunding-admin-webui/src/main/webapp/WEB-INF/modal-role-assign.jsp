@@ -8,9 +8,14 @@
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title">尚筹网系统弹窗</h4>
+				<h4 class="modal-title">系统弹窗</h4>
 			</div>
-			<form>
+			<div class="modal-body">
+				<ul id="authTreeDemo" class="ztree"></ul>
+			</div>
+
+
+			<form >
 
 				<div class="modal-footer">
 					<button id="confirmBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-ok"></i> 确认修改</button>

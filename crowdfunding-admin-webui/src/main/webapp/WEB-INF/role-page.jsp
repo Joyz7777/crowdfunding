@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="css/pagination.css"/>
 <script type="text/javascript" src="jquery/jquery.pagination.js" charset="UTF-8"></script>
 <script type="text/javascript" src="crowd/my-role.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="ztree/zTreeStyle.css"/>
+<script type="text/javascript" src="ztree/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript">
     $(function () {
 
@@ -18,6 +20,7 @@
         $("#rolePageBody").on("click",".roleAuthBtn",function() {
 
            $("#roleAssignAuthModal").modal("show");
+            getAuthTree();
         });
 
 
